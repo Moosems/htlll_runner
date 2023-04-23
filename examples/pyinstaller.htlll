@@ -1,12 +1,18 @@
 <kernel>
+    <import>
+        # The import tag allows you to import builtin python modules
+        <module>
+            os
+        </module>
+    </import>
     <envVars>
-        //Get the system ("Linux", "Darwin", "Windows)
+        # Get the system ("Linux", "Darwin", "Windows)
         <envVar name="OS" value="{os.name}"/>
     </envVars>
 
-    // Script allows for if statements, for loops, while loops, and functions
-    // All functions must be defined in the envVars tag
-    // Script if else statements and for loops can be used in the normal kernel
+    # Script allows for if statements, for loops, while loops, and functions
+    # All functions must be defined in the envVars tag
+    # Script if else statements and for loops can be used in the normal kernel
     <script>
         if ($OS.equals("Linux") or $OS.equals("Darwin")) {
             <pyinstaller>

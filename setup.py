@@ -12,6 +12,7 @@ setup(
     author="Moosems",
     author_email="moosems.j@gmail.com",
     url="https://github.com/Moosems/htlll_runner",
+    install_requires=["ply"],
     packages=["htlll_runner"],
     entry_points={
         "console_scripts": [

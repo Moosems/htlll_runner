@@ -1,11 +1,3 @@
-<h1 align="center">HyperText Low Level Language<h1>
-
-# Description
-
-HyperText Low Level Language is a low level language similar in looks to `HTML`. It is designed to be easy to read and write, but works low level and translates almost directly into the type of code you write into the terminal with the exception of some tags shown below.
-
-```html
-
 # HTLLL works by using bash commands in order
 # The following script will create a directory called testDir, 
 # make 5 files in it, use ls, and then delete the directory
@@ -110,32 +102,3 @@ HyperText Low Level Language is a low level language similar in looks to `HTML`.
         </args>
     </rm>
 </kernel>
-```
-
-The special tags are:
-- `<input>`: Allows the user to input a value
-- `<py>`: Allows you to use python modules
-- `<script>`: Allows you to use python and bash
-- `<literal>`: Allows you to use the literal string of the inner tag
-- `<var>`: Allows you to use variables
-- `<option>`: Allows you to use options
-- `<args>`: Allows you to use arguments
-- `<envVars>`: Allows you to set variables
-- `<import>`: Allows you to import python modules
-- `<module>`: Allows you to specify the module to import
-- `<function>`: Allows you to specify the function to use
-- `<value>`: Allows you to specify the value to use
-- `<kernel>`: The main tag that contains all the other tags
-
-# Installation
-To install HTLLL you must have python3 installed. Then you can install HTLLL by running the following command:
-```bash
-pip3 install htlll_runner
-```
-
-# Usage
-Once you have installed HTLLL you can run it by running the following command:
-```bash
-htlll_runner "path/to/file.htlll"
-```
-

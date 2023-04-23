@@ -1,11 +1,17 @@
 <kernel>
+    # Each base tag is a command and all commands run in order
     <pip>
+        # Allowed inner tags are options and args
+        # Options allow things like -r or --version
         <option>
             install
         </option>
         <option>
             -r
         <option>
+        # Args are just arguments like a file name or a package name
+        # So for this example it would be pip install -r requirements.txt
+        # Where pip is the command, install is an option, -r is an option, and requirements.txt is an arg
         <arg>
             requirements.txt
         </arg>
