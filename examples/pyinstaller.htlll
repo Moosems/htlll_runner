@@ -1,0 +1,25 @@
+<kernel>
+    <envVars>
+        //Get the system ("Linux", "Darwin", "Windows)
+        <envVar name="OS" value="{os.name}"/>
+    </envVars>
+
+    // Script allows for if statements, for loops, while loops, and functions
+    // All functions must be defined in the envVars tag
+    // Script if else statements and for loops can be used in the normal kernel
+    <script>
+        if ($OS.equals("Linux") or $OS.equals("Darwin")) {
+            <pyinstaller>
+                <args>
+                    DIP.spec
+                </args>
+            </pyinstaller>
+        } else if ($OS.equals("Windows")) {
+            <PyInstaller>
+                <args>
+                    windows-dip.spec
+                </args>
+            </PyInstaller>
+        }
+    </script>
+<kernel>

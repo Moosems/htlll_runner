@@ -1,0 +1,18 @@
+<kernel>
+    <pip>
+        <option>
+            install
+        </option>
+        <option>
+            -r
+        <option>
+        <arg>
+            requirements.txt
+        </arg>
+    </pip>
+    <pip>
+        <option>
+            list
+        </option>
+    </pip>
+</kernel>

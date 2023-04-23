@@ -1,0 +1,22 @@
+<kernel>
+    <envVars>
+        // set environment variables
+        <env name="PYTHONPATH" value="."/>
+    </envVars>
+    // Use isort, black, and ruff to format code
+    <isort>
+        <args>
+            $PYTHONPATH
+        </args>
+    </isort>
+    <black>
+        <args>
+            $PYTHONPATH
+        </args>
+    </black>
+    <ruff>
+        <args>
+            $PYTHONPATH
+        </args>
+    </ruff>
+</kernel>
