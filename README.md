@@ -5,7 +5,6 @@
 HyperText Low Level Language is a low level language similar in looks to `HTML`. It is designed to be easy to read and write, but works low level and translates almost directly into the type of code you write into the terminal with the exception of some tags shown below.
 
 ```html
-
 # HTLLL works by using bash commands in order
 # The following script will create a directory called testDir, 
 # make 5 files in it, use ls, and then delete the directory
@@ -57,6 +56,11 @@ HyperText Low Level Language is a low level language similar in looks to `HTML`.
             </py>
         </var>
         # And this sets the value of "system" to the value of os.uname().sysname
+        # Script tag to set the system-dependent commands based on the system (explained more later)
+        <script>
+            # Create a function alias that conforms to systems
+            <fucntion name="touch"> = <touch> if $system == "Linux" or "Darwin" else <type defaultArg="nul" defaultOption=">">
+        </script>
     </envVars>
     # Each base tag is a command and all commands run in order
     # To run a command you make a tag with the command name inside
