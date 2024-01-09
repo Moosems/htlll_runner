@@ -46,11 +46,10 @@ HyperText Low Level Language is a low level language similar in looks to `HTML`.
                 <module>
                     os
                 </module>
-                <var sysInfo="system">
-                    <function>
-                        uname
-                    </function>
-                </var>
+                # Run the uname() function and bring its return value to scope
+                <function>
+                    uname
+                </function>
                 # To get the name of the system you must use the <value> tag
                 <value name="sysname">
                     <var sysInfo="system"/>
@@ -116,15 +115,15 @@ The special tags are:
 - `<input>`: Allows the user to input a value
 - `<py>`: Allows you to use python modules
 - `<script>`: Allows you to use python and bash
-- `<literal>`: Allows you to use the literal string of the inner tag
+- `<literal>`: Allows you to use the literal string of the inner tag (inner uses are nullified and assumed part of the string literal)
 - `<var>`: Allows you to use variables
 - `<option>`: Allows you to use options
 - `<args>`: Allows you to use arguments
 - `<envVars>`: Allows you to set variables
 - `<import>`: Allows you to import python modules
-- `<module>`: Allows you to specify the module to import
-- `<function>`: Allows you to specify the function to use
-- `<value>`: Allows you to specify the value to use
+- `<module>`: Allows you to specify the module to import and bring it into scope
+- `<function>`: Allows you to specify the function to use from the current module in scope
+- `<value>`: Allows you to specify the value to use from the current module or function return in scope
 - `<kernel>`: The main tag that contains all the other tags
 
 # Installation
